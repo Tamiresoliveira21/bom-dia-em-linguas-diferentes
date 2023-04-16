@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM DIA EM LÍNGUAS DIFERENTES</title>
+    <h1>BOM DIA EM LÍNGUAS DIFERENTES</h1>
+    <button id="botton" onclick="trocarImagem()">Atualizar Imagem</button>
+    <link rel= "styleshout" href="estilo.css">
+    
+</head>
+
+<body>
+   
+  <div id="msg">
+    
+  </div>
+  
+  
+  <section>
+    <div >
+    <img id="imagem" src="fotobr.png" >
+    <p id="texto"   style="position: absolute;  top: 150px;  left: 50%; text-align:center; font: 60pt; "></p>
+      
+    <br>
+    </div>
+    </section>
+
+    <script>
+    
+      window.alert('clique em Atualizar para começar!')
+     const imagens = [
+        {
+          
+          caminho: "fotobr.png",
+          texto: "Bom dia"
+          
+        },
+        {
+         caminho: "fotoeua.png",
+          texto: "Good morning"
+        },
+        {
+        caminho: "fotojapao.png",
+          texto: "  おはよう"
+        }
+    
+      ];
+    let indice = 0;
+
+
+
+        function trocarImagem() {
+          const texto = document.getElementById("texto");
+          const imagem = document.getElementById("imagem");
+         
+            
+            
+            indice++;
+
+            if (indice >= imagens.length) {
+          indice = 0;
+            }
+            
+            imagem.src = imagens[indice].caminho;
+            texto.textContent = imagens[indice].texto;
+      }
+
+    
+
+        </script>  
+<style>
+  body{
+    background-color: rgb(75, 75, 241);
+     font: 20pt Arial;
+     text-align: center;
+   
+   
+}
+
+  img {
+  display: block;
+  margin: auto;
+}
+
+
+
+section{
+ background:rgb(50, 137, 196);
+ border-radius: 30px;
+padding:60px;
+width: 600px;
+margin: auto;
+box-shadow: 10px 10px 10px;
+
+}
+</style>
+</body>
+
+</html>
